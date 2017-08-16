@@ -1,0 +1,22 @@
+# This document refers to the barectf command that must be called after RTEMS Build phase( when #   source files are compiled into object files and libraries are built. For expansion purposes, #we must wait until we know if previously regestired network functions (from #"rtems_libio_handlers") or the file control block (from "rtems_libio_t" structure) will be used #because we will use a second included YAML file.
+
+config.yaml:
+
+version: '2.2'
+metadata:
+  $include:
+    - base.yaml
+    - stdint.yaml
+    - stdmisc.yaml
+  type-aliases:
+    addr_type: string
+  clocks:
+    sys_clock:
+      freq: 2500000000
+      offset:
+        seconds: null
+        cycles: 10028
+  streams:
+    default:
+      events:
+	

@@ -1,0 +1,18 @@
+base.yaml
+
+/*File control block - rtems_libio_t structure:
+  .. code-block:: c
+
+      struct rtems_libio_tt {
+          rtems_driver_name_t              *driver;
+          off_t                             size;
+          off_t                             offset;
+          unsigned32                        flags;
+          rtems_filesystem_location_info_t  pathinfo;
+          Objects_Id                        sem;
+          unsigned32                        data0;
+          void                              data1;
+          void                              file_info;
+          rtems_filesystem_file_handlers_r  handlers;
+
+*/
